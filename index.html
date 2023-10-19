@@ -14,7 +14,7 @@
         <div class="row justify-content-center align-items-center vh-100">
 
         <div class="col-auto bg-dark bg-gradient p-5 rounded">
-            <form onsubmit="false">
+            <form onsubmit="return false">
                 <!-- INPUT DO PRIMEIRO NUMERO -->
                 <div class="row">
                     <div class="col">
@@ -41,7 +41,7 @@
 
 
 
-                    <!-- INPUT DO SEGUNDO NUMERO -->
+                <!-- INPUT DO SEGUNDO NUMERO -->
                 <div class="row">
                     <div class="col">
                         <label for="numero2" class="form-label fw-bold text-light">SEGUNDO NUMERO</label>
@@ -65,7 +65,7 @@
                     </div>
                 <!-- RESULTADO DA OPERAÇÃO -->
                     <div class="col">
-                        <label class="form-label fw-bold text-light" id="resultado">***</label>
+                        <label class="form-label fw-bold text-light" id="resultado">****</label>
                     </div>
 
                 </div>
@@ -95,16 +95,23 @@
 </body>
 
 <script>
-    //declaração da função de somar//
+        //declaração da função de somar//
     function somar(){
         //declaração das vairaveis//
         let numero1;
         let numero2;
         let resultado;
 
-        //entrada de dados n1//
-        numero1 = document.querySelector('#numero1').value;
-        numero2 = document.querySelector('#numero2').value;
+        //entrada de dados n1 e n2//
+        
+        numero1 = parseInt(document.querySelector('#numero1').value);
+        numero2 = parseInt(document.querySelector('#numero2').value);
+
+        resultado = numero1 + numero2;
+
+        document.querySelector('#resultado').innerHTML = resultado;
+
+        // alert(' resultado ' + resultado);
 
     }
 
