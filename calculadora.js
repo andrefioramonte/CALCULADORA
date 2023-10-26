@@ -94,9 +94,10 @@ select.addEventListener('change',function (){
 
     function limpar(){
 
+    let imgOperacao = document.querySelector('#imgOperacao');
     document.querySelector('#numero1').value = '';
     document.querySelector('#numero2').value = '';
     document.querySelector('#resultado').innerHTML = '****';
-
-
+    imgOperacao.setAttribute('src', '')
+    document.querySelector('#slcoperador').value = '';
 }
